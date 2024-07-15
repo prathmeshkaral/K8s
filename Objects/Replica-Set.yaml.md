@@ -24,8 +24,8 @@ spec:
      ports:
      - containerPort: 80
 ````
+${\color{red} \textbf{RS In}}$
 ````
-${\color{green} \textbf{In}}$
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -52,7 +52,7 @@ spec:
      ports:
      - containerPort: 80``
 ````
-${\color{green} \textbf{RS NotIn}}$
+${\color{blue} \textbf{RS NotIn}}$
 ````
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -93,7 +93,7 @@ spec:
           ports:
           - containerPort: 81
 ````
-${\color{green} \textbf{RS Exixts}}$
+${\color{purple} \textbf{RS Exixts}}$
 ````
 # ReplicaSet With Exits set based selector
 apiVersion: apps/v1
