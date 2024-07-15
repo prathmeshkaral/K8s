@@ -25,6 +25,7 @@ spec:
      - containerPort: 80
 ````
 ````
+${\color{green} \textbf{In}}$
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -50,4 +51,84 @@ spec:
      image: nginx:latest
      ports:
      - containerPort: 80``
+````
+```${\color{green} \textbf{RS NotIn}}$`
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: nginx-app
+ labels:
+    app: nginx-app
+spec:
+  replicas: 3
+  selector:
+     matchExpressions:
+       - key : app
+         operator: NotIn
+         values:
+         - nginx-app
+
+  template:
+     metadata:
+       name: nginx-temp
+       labels:
+          app: nginx-app
+     spec:
+       containers:
+        - name: nginx-cont
+          image: nginx:latest
+          ports:
+          - containerPort: 80
+
+  template:
+     metadata:
+       name: httpd-temp
+       labels:
+          app: httpd
+     spec:
+       containers:
+        - name: httpd
+          image: httpd:latest
+          ports:
+          - containerPort: 81
+````
+````
+${\color{green} \textbf{RS Exixts}}$
+# ReplicaSet With Exits set based selector
+apiVersion: apps/v1
+kind: ReplicaSet
+metadata:
+ name: nginx-app
+ labels:
+    app: nginx-app
+spec:
+  replicas: 3
+  selector:
+     matchExpressions:
+       - key : app
+         operator: Exists
+
+  template:
+     metadata:
+       name: nginx-temp
+       labels:
+          app: nginx-app
+     spec:
+       containers:
+        - name: nginx-cont
+          image: nginx:latest
+          ports:
+          - containerPort: 80
+
+  template:
+     metadata:
+       name: httpd-temp
+       labels:
+          app: httpd
+     spec:
+       containers:
+        - name: httpd
+          image: httpd:latest
+          ports:
+          - containerPort: 81
 ````
