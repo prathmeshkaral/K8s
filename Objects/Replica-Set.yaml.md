@@ -1,4 +1,4 @@
-${\color{green} \textbf{Replica-set file}$
+${\color{green} \textbf{Replica-Set file}}$
 ````
 apiVersion: apps/v1
 kind: ReplicaSet
