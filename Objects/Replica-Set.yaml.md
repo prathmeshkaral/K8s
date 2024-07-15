@@ -52,7 +52,10 @@ spec:
      ports:
      - containerPort: 80``
 ````
-```${\color{green} \textbf{RS NotIn}}$`
+````
+${\color{green} \textbf{RS NotIn}}$
+````
+````
 apiVersion: apps/v1
 kind: ReplicaSet
 metadata:
@@ -94,6 +97,8 @@ spec:
 ````
 ````
 ${\color{green} \textbf{RS Exixts}}$
+````
+````
 # ReplicaSet With Exits set based selector
 apiVersion: apps/v1
 kind: ReplicaSet
@@ -131,4 +136,5 @@ spec:
           image: httpd:latest
           ports:
           - containerPort: 81
+````
 ````
