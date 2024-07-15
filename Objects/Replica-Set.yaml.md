@@ -93,7 +93,7 @@ spec:
           ports:
           - containerPort: 81
 ````
-${\color{purple} \textbf{RS Exixts}}$
+${\color{purple} \textbf{RS Exists}}$
 ````
 # ReplicaSet With Exits set based selector
 apiVersion: apps/v1
