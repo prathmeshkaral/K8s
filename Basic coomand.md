@@ -51,7 +51,7 @@ kubectl get rc
 kubectl delete rc <rc-name>
 ````
 
-${\color{pink} \textbf{Replica Set}}$
+${\color{dark orange} \textbf{Replica Set}}$
 
 1. Create Replica set
 ````
