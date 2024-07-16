@@ -1,5 +1,4 @@
-${\color{green} \textbf{Object.yml.md}$
-````
+${\color{blue}\textbf{Deployment.yml}}$
 ````
 apiVersion: apps/v1
 kind: Deployment
@@ -21,7 +20,6 @@ spec:
   template:
      metadata:
          name: nginx-temp
-
          labels:
             app: nginx-app
      spec:
