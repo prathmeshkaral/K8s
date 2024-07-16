@@ -1,6 +1,6 @@
 ## $${\color{red} \textbf{Basic Commands of k8s}}$$
 
-${\color{cyan} \textbf{pod}}$
+${\color{green} \textbf{pod}}$
 
 1. Check the minikube install or not.
 ````
@@ -35,7 +35,7 @@ kubectl exec <pod_name>  -it -c <container_name> -- /bin/bash
 kubectl run nginx --image=nginx --restart=Never
 ````
 
-${\color{cyan} \textbf{Replication Controller}}$
+${\color{yellow} \textbf{Replication Controller}}$
 
 
 1. Create Replication controller
@@ -51,7 +51,7 @@ kubectl get rc
 kubectl delete rc <rc-name>
 ````
 
-${\color{cyan} \textbf{Replica Set}}$
+${\color{pink} \textbf{Replica Set}}$
 
 1. Create Replica set
 ````
