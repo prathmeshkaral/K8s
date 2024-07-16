@@ -20,7 +20,7 @@ spec:
   template:
      metadata:
          name: nginx-temp
-````
+
          labels:
             app: nginx-app
      spec:
@@ -29,3 +29,4 @@ spec:
                 image: nginx:latest
                 ports:
                   - containerPort: 80
+````
