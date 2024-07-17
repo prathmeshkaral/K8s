@@ -15,6 +15,7 @@ spec:
    metadata:
     labels:
       env: dev
+
    spec:
     containers:
     - name: demo
@@ -22,3 +23,9 @@ spec:
       ports:
       - containerPort: 80
 ````
+
+${\color{red} \textbf{Labels :}}$  Key-value pairs assigned to Kubernetes objects for organization and selection.
+
+${\color{red} \textbf{Replicas :}}$  The desired number of identical pod instances to run.
+
+Selector : Criteria used to identify and manage groups of labeled objects.
