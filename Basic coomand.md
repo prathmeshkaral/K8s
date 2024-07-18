@@ -51,7 +51,7 @@ kubectl get rc
 kubectl delete rc <rc-name>
 ````
 
-## ${\color{yellow} \textbf{Replica Set}}$
+## ${\color{orange} \textbf{Replica Set}}$
 
 1. Create Replica set
 ````
@@ -66,7 +66,7 @@ kubectl get rs
 kubectl delete rs <rs-name>
 ````
 
-## ${\color{purple} \textbf{Deployment}}$
+## ${\color{green} \textbf{Deployment}}$
 
 1. Create Deployment wit command
 ````
@@ -119,4 +119,42 @@ kubectl rollout undo deployment <deployment_name> --to-revision=<number_of_revis
 13. Confirmation to Rollout.
 ````
 kubectl rollout status deployment <deployment_name>
+````
+## ${\color{yellow} \textbf{Namespace}}$
+
+1. Create a namespace.
+````
+kubectl create ns <ns_name>
+````
+2. Delete Namespace.
+````
+kubectl delete ns <ns_name>
+````
+3. List of Namespaces.
+````
+kubectl get ns
+````
+4. Get all pods with all namespaces.
+````
+kubectl get pods --all-namespaces
+````
+5. Get pod list in particular namespaces.
+````
+kubectl get pod -n <ns_name>
+````
+6. Set default Namespace.
+````
+kubectl config set-context --current --namespace=<ns_name>
+````
+7. apply any resource in particular name space.
+````
+kubectl apply -f <file.yaml> --namespace <ns_name>
+````
+8. Ceck the default Namespace.
+````
+kubectl config view --minify | grep namespace:
+````
+9. Run command in the particular Namespace.
+````
+kubectl exec -it <pod_name> -n <ns_name> -- <command which we want to run>
 ````
