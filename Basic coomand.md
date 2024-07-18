@@ -1,4 +1,4 @@
-# $${\color{violet} \textbf{Basic Commands of k8s}}$$
+# $${\color{cyan} \textbf{Basic Commands of k8s}}$$
 
 ## ${\color{red} \textbf{pod}}$
 
