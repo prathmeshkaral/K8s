@@ -1,12 +1,12 @@
-# $${\color{cyan} \textbf{Basic Commands of k8s}}$$
+# $${\color{red} \textbf{Basic Commands of k8s}}$$
 
-## ${\color{red} \textbf{pod}}$
+## ${\color{cyan} \textbf{pod}}$
 
 1. Check the minikube install or not.
 ````
 kubectl get node
 ````
-3. Create pod.
+2. Create pod.
 ````
 kubectl apply -f <file.yaml>
 ````
@@ -34,8 +34,11 @@ kubectl exec <pod_name>  -it -c <container_name> -- /bin/bash
 ````
 kubectl run nginx --image=nginx --restart=Never
 ````
-
-## ${\color{blue} \textbf{Replication Controller}}$
+9. All delete which created with yaml file
+````
+kubectl delete -f <file.yml>
+````
+## ${\color{orange} \textbf{Replication Controller}}$
 
 
 1. Create Replication controller
@@ -51,7 +54,7 @@ kubectl get rc
 kubectl delete rc <rc-name>
 ````
 
-## ${\color{orange} \textbf{Replica Set}}$
+## ${\color{yellow} \textbf{Replica Set}}$
 
 1. Create Replica set
 ````
@@ -120,7 +123,7 @@ kubectl rollout undo deployment <deployment_name> --to-revision=<number_of_revis
 ````
 kubectl rollout status deployment <deployment_name>
 ````
-## ${\color{yellow} \textbf{Namespace}}$
+## ${\color{blue} \textbf{Namespace}}$
 
 1. Create a namespace.
 ````
@@ -157,4 +160,18 @@ kubectl config view --minify | grep namespace:
 9. Run command in the particular Namespace.
 ````
 kubectl exec -it <pod_name> -n <ns_name> -- <command which we want to run>
+````
+## ${\color{red} \textbf{Service}}$
+
+1. Create Service.
+````
+kubectl expose deployment my-deployment --type=ClusterIP --name=my-service --port=80 --target-port=9376
+````
+2. Communicate between services from pod.
+````
+curl <opposite_service_ip>:<port_of_pod>
+````
+3. List of service.
+````
+kubectl get svc
 ````
