@@ -1,8 +1,8 @@
-# ${\color{red} \textbf{Service}}$
+# ${\color{blue} \textbf{Service}}$
 
-## ${\color{brown} \textbf{ClusterIP}}$
+## ${\color{green} \textbf{ClusterIP}}$
 
-${\color{green} \textbf{Deployment and Service 1}}$
+${\color{orange} \textbf{Deployment and Service 1}}$
 
 
 ````
@@ -40,7 +40,7 @@ spec:
       targetPort: 80
 ````
 
-${\color{green} \textbf{Deployment and Service 2}}$
+${\color{cyan} \textbf{Deployment and Service 2}}$
 ````
 apiVersion: apps/v1
 kind: Deployment
@@ -155,7 +155,7 @@ spec:
       targetPort: 80
 ````
 
-## ${\color{brown} \textbf{External Name}}$
+## ${\color{orange} \textbf{External Name}}$
 ````
 apiVersion: apps/v1
 kind: Deployment
