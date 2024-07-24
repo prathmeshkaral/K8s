@@ -117,7 +117,7 @@ spec:
       nodePort: 30001  # You can specify a particular port or let Kubernetes allocate one for you
 ````
 
-## ${\color{brown} \textbf{Load Balancer}}$
+## ${\color{blue} \textbf{Load Balancer}}$
 
 ````
 apiVersion: apps/v1
